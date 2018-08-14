@@ -1,0 +1,30 @@
+server:
+  name: ms-pte-booking
+  port: 80
+
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
+
+spring:
+  profiles:
+    active: dev
+  data:
+    mongodb:
+      uri: localhost:27017
+
+# Spring Boot2 Actuator endpoints to be enabled
+endpoints:
+  health:
+    enabled: true
+    id: health
+    sensitive: false
+  metrics:
+    enabled: true
+    id: metrics
+    sensitive: false
+  trace:
+    enabled: true
+    sensitive: false
