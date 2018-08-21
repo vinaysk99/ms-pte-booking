@@ -212,149 +212,149 @@
         </pluginManagement>
     </build>
 
-        <dependencies>
-            <dependency>
-                <!-- Import dependency management from Spring Boot -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+    <dependencies>
+        <dependency>
+            <!-- Import dependency management from Spring Boot -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring.boot.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
 
-            <!-- JSON API documentation for spring based applications -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox.swagger2.version}</version>
-            </dependency>
+        <!-- JSON API documentation for spring based applications -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.swagger2.version}</version>
+        </dependency>
 
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox.swaggerUI.version}</version>
-            </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.swaggerUI.version}</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-aop</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
 
-            <!-- spring -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring.boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-tomcat</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-jetty</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-test</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>5.0.8.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>5.0.8.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-mongodb</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.modelmapper</groupId>
-                <artifactId>modelmapper</artifactId>
-                <version>1.1.0</version>
-            </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>1.1.0</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.12</version>
-            </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.12</version>
+        </dependency>
 
-            <dependency>
-                <groupId>nl.jqno.equalsverifier</groupId>
-                <artifactId>equalsverifier</artifactId>
-                <version>2.4</version>
-                <scope>test</scope>
-            </dependency>
+        <dependency>
+            <groupId>nl.jqno.equalsverifier</groupId>
+            <artifactId>equalsverifier</artifactId>
+            <version>2.4</version>
+            <scope>test</scope>
+        </dependency>
 
-            <!-- test -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.12</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>2.18.3</version>
-                <scope>test</scope>
-            </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.18.3</version>
+            <scope>test</scope>
+        </dependency>
 
-            <!-- self-contained hamcrest jar containing all of the sub-modules in a single artifact -->
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-all</artifactId>
-                <version>1.3</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- Logging -->
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>1.2.3</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>1.2.3</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.7</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.5</version>
-            </dependency>
-            <dependency>
-                <groupId>joda-time</groupId>
-                <artifactId>joda-time</artifactId>
-                <version>2.9.9</version>
-            </dependency>
+        <!-- self-contained hamcrest jar containing all of the sub-modules in a single artifact -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.9</version>
+        </dependency>
 
-        </dependencies>
+    </dependencies>
 </project>

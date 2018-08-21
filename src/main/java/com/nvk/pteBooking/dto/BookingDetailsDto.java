@@ -8,6 +8,7 @@ import com.nvk.pteBooking.util.serialization.JsonJodaLocalDateDeserializer;
 import com.nvk.pteBooking.util.serialization.JsonJodaLocalDateSerializer;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +18,7 @@ import org.joda.time.LocalDate;
 @EqualsAndHashCode
 @Getter
 @AllArgsConstructor
+@Builder
 @NoArgsConstructor
 public class BookingDetailsDto implements Serializable {
 

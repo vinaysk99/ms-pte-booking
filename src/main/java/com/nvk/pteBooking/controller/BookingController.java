@@ -7,11 +7,11 @@ import com.nvk.pteBooking.service.BookingService;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
+import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,15 +25,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@AllArgsConstructor
 public class BookingController {
 
   private static final Logger log = LoggerFactory.getLogger(BookingController.class);
 
-  @Autowired
-  private BookingService bookingService;
+  private final BookingService bookingService;
 
-  @Autowired
-  private ModelMapper modelMapper;
+  private final ModelMapper modelMapper;
 
   /**
    * Create a new sample record.

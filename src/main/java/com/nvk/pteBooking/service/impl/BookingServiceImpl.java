@@ -1,23 +1,23 @@
 package com.nvk.pteBooking.service.impl;
 
 import com.nvk.pteBooking.domain.BookingDetails;
+import com.nvk.pteBooking.exception.EntityNotFoundException;
 import com.nvk.pteBooking.repository.BookingDetailsMongoRepository;
 import com.nvk.pteBooking.service.BookingService;
-import com.nvk.pteBooking.exception.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
+import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class BookingServiceImpl implements BookingService {
 
   private static final Logger log = LoggerFactory.getLogger(BookingService.class);
 
-  @Autowired
-  private BookingDetailsMongoRepository bookingDetailsMongoRepository;
+  private final BookingDetailsMongoRepository bookingDetailsMongoRepository;
 
   @Override
   public BookingDetails makeABooking(BookingDetails bookingDetails) {
