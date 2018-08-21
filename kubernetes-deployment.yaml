@@ -1,0 +1,73 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ms-pte-booking
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ms-pte-booking
+    spec:
+      containers:
+      - name: ms-pte-booking
+        image: gcr.io/vinayskg1/ms-pte-booking:latest-sandbox
+        imagePullPolicy: Always
+        resources:
+         requests:
+           cpu: "25m"
+           memory: "320Mi"
+        ports:
+          - name: https
+            containerPort: 8443
+        volumeMounts:
+          - mountPath: "/var/log/nvk"
+            name: log
+          - mountPath: "/etc/localtime"
+            name: tz-config
+        env:
+            - name: ENVIRONMENT
+              value: "sandbox"
+            - name: XMS
+              value: "-Xms256m"
+            - name: XMX
+              value: "-Xmx256m"
+            - name: LOG_FILE_NAME
+              value: "ms-pte-booking"
+            - name: KEYSTORE_PASSWORD
+              value: "123456"
+            - name: KEY_PASSWORD
+              value: "123456"
+            - name: DB_PASSWORD
+              value: "dummy"
+            - name: MS_SEED_OTHERS
+              valueFrom:
+                  secretKeyRef:
+                      name: nvk-secrets
+                      key: mspte-sandbox-soth
+      volumes:
+        - name: log
+          nfs:
+            server: 10.100.0.3
+            path: "/var/nfs/log"
+        - name: tz-config
+          hostPath:
+            path: "/usr/share/zoneinfo/Australia/Sydney"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: ms-pte-booking
+  name: ms-pte-booking
+spec:
+  type: ClusterIP
+  ports:
+  - name: "application"
+    port: 443
+    targetPort: 8443
+  - name: "management"
+    port: 8081
+    targetPort: 8081
+  selector:
+    app: ms-pte-booking

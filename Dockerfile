@@ -18,4 +18,4 @@ RUN setcap CAP_NET_BIND_SERVICE=+eip $JAVA_HOME/bin/java
 USER ms-pte-booking
 
 # Launch application server
-ENTRYPOINT exec $JAVA_HOME/bin/java $XMS $XMX -jar -Dspring.profiles.active=$ENVIRONMENT /home/ms-pte-booking/ms-pte-booking-*.jar --db.password="$DB_PASSWORD" --audit.db.password="$AUDIT_DB_PASSWORD" --jwt.db.password="$JWT_DB_PASSWORD" --server.ssl.key-store-password="$KEYSTORE_PASSWORD" --server.ssl.key-password="$KEY_PASSWORD"
+ENTRYPOINT exec $JAVA_HOME/bin/java $XMS $XMX -jar -Dspring.profiles.active=$ENVIRONMENT /home/ms-pte-booking/ms-pte-booking-*.jar --db.password="$DB_PASSWORD" --server.ssl.key-password="$KEY_PASSWORD"
